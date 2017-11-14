@@ -41,8 +41,8 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 var orm = {
-    all: function(tableInput, cb) {
-        var queryString = "SELECT * FROM " + tableInput;
+    all: function(table, cb) {
+        var queryString = "SELECT * FROM " + table;
         
         connection.query(queryString, function(err, result) {
             if (err) {
@@ -52,7 +52,7 @@ var orm = {
         });
     },
     allOrder: function(table, orderCol, cb) {
-        var queryString = "SELECT * FROM " + tableInput + " ORDER BY " + orderCol;
+        var queryString = "SELECT * FROM " + table + " ORDER BY " + orderCol;
         
         connection.query(queryString, function(err, result) {
             if (err) {
@@ -62,7 +62,7 @@ var orm = {
         });
     },
     allOrderDesc: function(table, orderCol, cb) {
-        var queryString = "SELECT * FROM " + tableInput + " ORDER BY " + orderCol + " DESC";
+        var queryString = "SELECT * FROM " + table + " ORDER BY " + orderCol + " DESC";
         
         connection.query(queryString, function(err, result) {
             if (err) {
