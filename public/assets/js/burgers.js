@@ -11,8 +11,8 @@ $(function() {
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newState
-        }).then(function() {
-            // console.log("changed devour to", true);
+        }).then(function(data) {
+            console.log("changed devour to", true);
             // Reload the page to get the updated list
             location.reload();
         });
@@ -26,15 +26,15 @@ $(function() {
 
         if(name !== "") {
             var newBurger = {
-                name: name
+                burger_name: name
             };
 
             // Send the POST request.
             $.ajax("/api/burgers", {
                 type: "POST",
                 data: newBurger
-            }).then(function() {
-                // console.log("created new burger");
+            }).then(function(data) {
+                console.log("created new burger");
                 // Reload the page to get the updated list
                 location.reload();
             });
@@ -49,7 +49,7 @@ $(function() {
 
         $.ajax("/api/burgers/" + id, {
             type: "DELETE"
-        }).then(function() {
+        }).then(function(data) {
             // Reload the page to get the updated list
             location.reload();
         });
