@@ -2,7 +2,7 @@
 
 ### Overview
 
-In this assignment, you'll create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Be sure to follow the MVC design pattern; use Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.
+In this assignment, you'll create a burger logger with MySQL, Node, Express, Handlebars and Sequelize. Be sure to follow the MVC design pattern.
 
 ### Instructions
 
@@ -10,28 +10,24 @@ In this assignment, you'll create a burger logger with MySQL, Node, Express, Han
 
 * Whenever a user submits a burger's name, your app will display the burger on the left side of the page -- waiting to be devoured.
 
-* Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
+* Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page with customer.
 
 * Your app will store every burger in a database, whether devoured or not.
 
 #### Directory structure
 
-All the recommended files and directories from the steps above should look like the following structure:
+All the recommended files and directories should look like the following structure:
 
 ```
 .
 ├── config
-│   ├── connection.js
-│   └── orm.js
+│   └── config.json
 │ 
 ├── controllers
 │   └── burgers_controller.js
 │
-├── db
-│   ├── schema.sql
-│   └── seeds.sql
-│
 ├── models
+│   ├── index.js
 │   └── burger.js
 │ 
 ├── node_modules
@@ -39,12 +35,16 @@ All the recommended files and directories from the steps above should look like 
 ├── package.json
 │
 ├── public
-│   ├── assets
-│   │   ├── css
-│   │   │   └── burger_style.css
-│   │   └── img
-│   │       └── burger.png
+│   ├── css
+│   │   └── style.css
+│   ├── image
+│   │   └── ...
+│   ├── js
+│   │   └── burgers.js
+│   │
 │   └── test.html
+│
+├── schema.sql
 │
 ├── server.js
 │
