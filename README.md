@@ -35,13 +35,13 @@ All the recommended files and directories should look like the following structu
 ├── package.json
 │
 ├── public
-│   ├── css
-│   │   └── style.css
-│   ├── image
-│   │   └── ...
-│   ├── js
-│   │   └── burgers.js
-│   │
+│   ├── assets
+│   │   ├── css
+│   │   │   └── burger_style.css
+│   │   ├── img
+│   │   │   └── ...
+│   │   └── js
+│   │       └── burgers.js
 │   └── test.html
 │
 ├── schema.sql
