@@ -37,16 +37,8 @@ h1 {
 	height: 150px;
 }
 
-.col-left {
-	padding-left: 20%;
-}
-
-.col-right {
-	text-align: left;
-}
-
 .table-first-col {
-	width: 270px;
+	width: 230px;
 }
 
 td {

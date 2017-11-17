@@ -5,7 +5,8 @@
     </section>
 
     <section class="row">
-        <div class="col-md-7 col-left">
+        <div class="col-md-2">&nbsp;</div>
+        <div class="col-md-5">
             <table>
                 {{#each burgers}}
                     {{#unless devoured}}
@@ -14,13 +15,18 @@
                 {{/each}}
             </table>
         </div>
-        <div class="col-md-5 col-right">
+        <div class="col-md-3">
             {{#each burgers}}
                 {{#if devoured}}
-                    <div>{{id}}. {{burger_name}}</div>
+                    <div>{{id}}. {{burger_name}} 
+                        {{#if eat_person}}
+                            (Eaten by {{eat_person}})
+                        {{/if}}
+                    </div>
                 {{/if}}
             {{/each}}        
-        </div>          
+        </div>
+        <div class="col-md-2">&nbsp;</div>
     </section>
 
     <form class="create-form">
